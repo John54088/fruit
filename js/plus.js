@@ -29,7 +29,6 @@ function search(){
     newData = data.filter(function(item){
         return item.作物名稱 == input;
     });
-    console.log(newData);
 
     
     
