@@ -41,74 +41,77 @@
               <option>依交易量排序</option>
             </select>
           </div>
-          <table class="market table me-4">
-            <thead class="js-sort-advanced">
-              <tr>
-                <th width="15%">作物名稱</th>
-                <th width="15%">市場名稱</th>
-                <th  width="14%">
-                  <div class="inline-flex sort-advanced" data-price-num="上價">上價
-                    <span>
-                      <i data-price="上價" data-sort="up" class="fas fa-caret-up"></i>
-                      
-                      <i data-price="上價" data-sort="down" class="fas fa-caret-down"></i>
-                    </span>
-                  </div>
-                </th>
-                <th width="14%">
-                  <div class="inline-flex sort-advanced" data-price-num="中價">中價
-                    <span>
-                       <i data-price="中價" data-sort="up" class="fas fa-caret-up"></i>
-                      
-                      <i data-price="中價" data-sort="down" class="fas fa-caret-down"></i>
-                    </span>
-                  </div>
-                </th>
-                <th width="14%">
-                  <div class="inline-flex sort-advanced" data-price-num="下價">下價
-                    <span>
-                       <i data-price="下價" data-sort="up" class="fas fa-caret-up"></i>
-                      
-                      <i data-price="下價" data-sort="down" class="fas fa-caret-down"></i>
-                    </span>
-                  </div>
-                </th>
-                <th width="14%">
-                  <div class="inline-flex sort-advanced" data-price-num="平均價">平均價
-                    <span>
-                    <i data-price="平均價" data-sort="up" class="fas fa-caret-up"></i>
-                      
-                      <i data-price="平均價" data-sort="down" class="fas fa-caret-down"></i>
-                    </span>
-                  </div>
-                </th>
-                <th width="14%">
-                  <div class="inline-flex sort-advanced" data-price-num="交易量">交易量
-                    <span>
-                     <i data-price="交易量" data-sort="up" class="fas fa-caret-up"></i>
-                      
-                      <i data-price="交易量" data-sort="down" class="fas fa-caret-down"></i>
-                    </span>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="showList">
-              <tr>
-                <td colspan="7" class="text-center p-3">請輸入並搜尋想比價的作物名稱^＿^</td>
-                <!--           <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td> -->
-              </tr>
-              
-            </tbody>
-          </table>
+          <div class="table-box">
+            <table class="market table me-4">
+                <thead class="js-sort-advanced fw">
+                    <tr>
+                        <th width="15%">作物名稱</th>
+                        <th width="15%">市場名稱</th>
+                        <th width="14%">
+                            <div class="inline-flex sort-advanced" data-price-num="上價">上價
+                                <span>
+                                    <i data-price="上價" data-sort="up" class="fas fa-caret-up"></i>
+            
+                                    <i data-price="上價" data-sort="down" class="fas fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </th>
+                        <th width="14%">
+                            <div class="inline-flex sort-advanced" data-price-num="中價">中價
+                                <span>
+                                    <i data-price="中價" data-sort="up" class="fas fa-caret-up"></i>
+            
+                                    <i data-price="中價" data-sort="down" class="fas fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </th>
+                        <th width="14%">
+                            <div class="inline-flex sort-advanced" data-price-num="下價">下價
+                                <span>
+                                    <i data-price="下價" data-sort="up" class="fas fa-caret-up"></i>
+            
+                                    <i data-price="下價" data-sort="down" class="fas fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </th>
+                        <th width="14%">
+                            <div class="inline-flex sort-advanced" data-price-num="平均價">平均價
+                                <span>
+                                    <i data-price="平均價" data-sort="up" class="fas fa-caret-up"></i>
+            
+                                    <i data-price="平均價" data-sort="down" class="fas fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </th>
+                        <th width="14%">
+                            <div class="inline-flex sort-advanced" data-price-num="交易量">交易量
+                                <span>
+                                    <i data-price="交易量" data-sort="up" class="fas fa-caret-up"></i>
+            
+                                    <i data-price="交易量" data-sort="down" class="fas fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="showList">
+                    <tr>
+                        <td colspan="7" class="text-center p-3">請輸入並搜尋想比價的作物名稱^＿^</td>
+                        <!--           <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                    </tr>
+            
+                </tbody>
+            </table>
+          </div>
+          
       
         </div>
       
-        <select id="js-moblie-select" class="mobile-select border-2 border-secondary d-block d-md-none rounded-pill pt-1 pb-1 position-fixed end-0 bottom-0  ps-2 pe-3">
+        <select id="js-moblie-select" class="mobile-select border-2 d-block d-md-none rounded-pill pt-1 pb-1 position-fixed end-0 ps-2 pe-3">
           <option>排序</option>
           <option>上價</option>
           <option>中價</option>

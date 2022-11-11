@@ -4,6 +4,8 @@ const showList = document.querySelector(".showList");
 const buttonGroup = document.querySelector(".button-group");
 const sortSelect = document.querySelector(".sort-select");
 const jsSort = document.querySelector(".js-sort-advanced");
+const jsCrop = document.querySelector("#js-crop-name");
+const jsMoblie = document.querySelector("#js-moblie-select");
 
 let data = [];
 let newData = [];
@@ -40,6 +42,7 @@ function search(){
       </tr>`
     }
     searchText.value = "";
+    jsCrop.textContent = `查看「${input}」的比價結果`;
 };
 btn.addEventListener("click", function(e){
     search();
@@ -59,16 +62,19 @@ buttonGroup.addEventListener("click", function(e){
         newData = data.filter(function(item){
             return item.種類代碼 == "N04";
         });
+        jsCrop.textContent = "查看「蔬果」的比價結果";
         renderData();
     }else if(e.target.getAttribute("data-type") == "N05"){
         newData = data.filter(function(item){
             return item.種類代碼 == "N05";
         });
+        jsCrop.textContent = "查看「水果」的比價結果";
         renderData();
     }else if(e.target.getAttribute("data-type") == "N06"){
         newData = data.filter(function(item){
             return item.種類代碼 == "N06";
         });
+        jsCrop.textContent = "查看「花卉」的比價結果";
         renderData();
     }
 });
@@ -98,7 +104,33 @@ sortSelect.addEventListener("change", function(e){
     };
     count = 1;
     renderData();
-})
+});
+
+jsMoblie.addEventListener("change", function(e){
+    if(e.target.value == "上價"){
+        newData = newData.sort(function(a, b){
+            return b.上價 - a.上價
+        });
+    }else if(e.target.value == "中價"){
+        newData = newData.sort(function(a, b){
+            return b.中價 - a.中價
+        });
+    }else if(e.target.value == "下價"){
+        newData = newData.sort(function(a, b){
+            return b.下價 - a.下價
+        });
+    }else if(e.target.value == "平均價"){
+        newData = newData.sort(function(a, b){
+            return b.平均價 - a.平均價
+        });
+    }else if(e.target.value == "交易量"){
+        newData = newData.sort(function(a, b){
+            return b.交易量 - a.交易量
+        });
+    };
+    count = 1;
+    renderData();
+});
 
 // 更改排列順序
 jsSort.addEventListener("click", function(e){
@@ -172,8 +204,8 @@ function renderData(){
     let str = "";
     newData.forEach(function(item, index){
         str += `<tr>
-        <td colspan="1" class="p-3">${item.作物名稱}</td>
-        <td colspan="1" class="p-3">${item.市場名稱}</td>
+        <td colspan="1" class="p-3 fw">${item.作物名稱}</td>
+        <td colspan="1" class="p-3 fw">${item.市場名稱}</td>
         <td colspan="1" class="p-3">${item.上價}</td>
         <td colspan="1" class="p-3">${item.中價}</td>
         <td colspan="1" class="p-3">${item.下價}</td>
